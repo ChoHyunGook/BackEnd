@@ -1,5 +1,7 @@
 package com.bbong.api.member.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * packageName: com.bbong.api.member.service
  * fileName        : MemberServiceImpl
@@ -11,6 +13,7 @@ package com.bbong.api.member.service;
  * ================================
  * 2022-02-11         chohyungook        최초 생성
  */
+@Service
 public class MemberServiceImpl implements MemberService{
     @Override
     public String memberList() {
@@ -34,6 +37,21 @@ public class MemberServiceImpl implements MemberService{
 
     @Override
     public String savingMoneyList() {
+        return null;
+    }
+
+    @Override
+    public String calc() {
+        return null;
+    }
+
+    @Override
+    public String bmi() {
+        return null;
+    }
+
+    @Override
+    public String grade() {
         return null;
     }
 }

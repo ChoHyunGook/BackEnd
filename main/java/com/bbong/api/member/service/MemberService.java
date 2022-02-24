@@ -17,4 +17,7 @@ public interface MemberService {
     String sendList();
     String mailSend();
     String savingMoneyList();
+    String calc();
+    String bmi();
+    String grade();
 }
