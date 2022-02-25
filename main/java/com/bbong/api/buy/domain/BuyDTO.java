@@ -1,7 +1,5 @@
 package com.bbong.api.buy.domain;
 
-import com.bbong.api.member.domain.MemberDTO;
-
 /**
  * packageName: com.bbong.api.buy.domain
  * fileName        : BuyDTO

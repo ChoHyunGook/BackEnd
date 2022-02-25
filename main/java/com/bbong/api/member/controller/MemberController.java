@@ -1,6 +1,6 @@
 package com.bbong.api.member.controller;
 
-import com.bbong.api.member.domain.MemberDTO;
+import com.bbong.api.member.domain.*;
 import com.bbong.api.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -18,18 +18,38 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/member")
 public class MemberController {
 
     private final MemberService service;
 
-    @GetMapping("/member/bmi/{name}/{inch}/{weight}")
-    public String getBmi(@PathVariable String name,
-                         @PathVariable double inch,
-                         @PathVariable double weight){
-        System.out.println("리액트에서 넘어온 이름:"+name);
-        System.out.println("리액트에서 넘어온 키:"+inch);
-        System.out.println("리액트에서 넘어온 몸무게:"+weight);
-        return "BMI 정상임";
+    @PostMapping("/bmi")
+    public String getBmi(@RequestBody BmiDTO bmi){
+        return service.bmi(bmi);
+    }
+    @PostMapping("/calc")
+    public String getClac(@RequestBody CalcDTO calc){
+        return service.calc(calc);
+    }
+    @PostMapping("/login")
+    public String getLogin(@RequestBody LoginDTO login){
+        return service.login(login);
+    }
+    @PostMapping("/grade")
+    public String getGrade(@RequestBody GradeDTO grade){
+        return service.grade(grade);
+    }
+    @PostMapping("/change")
+    public String getChange(@RequestBody ChangeDTO change){
+        return service.change(change);
+    }
+    @PostMapping("/circle")
+    public String getCircle(@RequestBody CircleDTO circle){
+        return service.circle(circle);
+    }
+    @PostMapping("/week")
+    public String getWeek(@RequestBody WeekDTO week){
+        return service.week(week);
     }
 
 }

@@ -16,13 +16,8 @@ import org.springframework.stereotype.Component;
  */
 @Data//겟셋
 @Component//싱글
-public class MemberDTO {
-    private String id;
+public class BmiDTO {
     private String name;
-    private int numberr;
-    private String addr;
-    private String phone1;
-    private String phone2;
     private double inch;
     private double weight;
     private String regDate;
